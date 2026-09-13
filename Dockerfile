@@ -10,6 +10,6 @@ RUN chmod +x hospital-history-service/mvnw \
 
 FROM eclipse-temurin:25-jre
 WORKDIR /app
-COPY --from=build /workspace/hospital-patient-service/target/*SNAPSHOT.jar /app/app.jar
+COPY --from=build /workspace/hospital-history-service/target/*SNAPSHOT.jar /app/app.jar
 EXPOSE 8083
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
